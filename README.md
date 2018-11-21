@@ -28,6 +28,7 @@ Puis répéter jusque la fin
 
 ```
 Donner des exemples jusque la fin de l'installation
+```
 
 ## Coder avec
 
