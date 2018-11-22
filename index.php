@@ -1,24 +1,12 @@
-$username = 'root';
-    $password = 'online@2017';
-    $database ='formation';
-    $host = 'localhost';
+<?php
 
-    try{
+require_once 'vendor/autoload.php';
 
-        $bdd = new PDO('mysql:host='.$host.';dbname='.$database.';charset=utf8',$username , $password);
+$loader = new Twig_Loader_Filesystem('vue/');
+$twig = new Twig_Environment($loader, array());
 
-    }catch (Exception $e){
 
-        die('Erreur : ' . $e->getMessage());
 
-    }
-    $num = 1
-    $sql = 'select * from user WHERE id=:num';
-    $response = $bdd->prepare( $sql );
-    $response->bindParam(':num', $num, PDO::PARAM_INT)
-    $response->execute();
-    $list =     $response->fetchAll(PDO::FETCH_ASSOC);
+    require 'controleur/default_controleur.php';
 
-    foreach( $list as $row ){
-        echo $row['id'].'<br/>';
-    }
+    echo $block;

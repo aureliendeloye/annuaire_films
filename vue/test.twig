@@ -1,0 +1,14 @@
+{% extends "template.twig" %}
+
+{% block test %}
+<p class="col-12 text-center">
+    j'affiche les titres au chargement <br>
+    <ul>
+        {% for array in list %}
+            {% for element in array %}
+                <li>{{element}}</li>
+            {% endfor %}
+        {% endfor %}
+    </ul>
+</p>
+{% endblock %}
