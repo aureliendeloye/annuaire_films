@@ -14,15 +14,21 @@
 </head>
 
 <body>
-    <header>
-        <h1>Annuaire de films</h1>
+    <header class="container-fluid">
+        <div class="row">
+            <a class="col-12 text-center m-4" href="/">
+                <h1>Annuaire de films</h1>
+            </a>
+        </div>
     </header>
     <main class="container-fluid">
-        <section class="row">
-            <button class="btn btn-success col-12"><a href="index.php/test">Afficher la base de données complète</a></button>
-            <p class="col-12 text-center">
-                Ok, la structure MVC fonctionne au chargement !
-            </p>
+        <section class="row d-flex flex-column align-items-center">
+            <a class="m-4" href="/test">
+                <button class="btn btn-primary">Affiche la liste</button>
+            </a>
+            <a class="m-4" href="/genre">
+                <button class="btn btn-primary">Affiche les genres</button>
+            </a>
             {% block test %}
             {% endblock %}
         </section>

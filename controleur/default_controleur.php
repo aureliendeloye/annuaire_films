@@ -1,7 +1,5 @@
 <?php
 
-require './modele/test_modele.php';
+require './modele/default_modele.php';
 
-$block = $twig->render('test.twig', array('list' => $list));
-
-return $block;
+echo $twig->render('default.twig', array('list' => $list));
