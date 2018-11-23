@@ -1,24 +1,26 @@
-$username = 'root';
-    $password = 'online@2017';
-    $database ='formation';
-    $host = 'localhost';
+<?php
+require_once 'vendor/autoload.php';
 
-    try{
+$loader = new Twig_Loader_Filesystem('view');
+$twig = new Twig_Environment($loader, array());
 
-        $bdd = new PDO('mysql:host='.$host.';dbname='.$database.';charset=utf8',$username , $password);
+$url = $_SERVER['REQUEST_URI'];
+$request = explode("/", $url);
 
-    }catch (Exception $e){
+$controler = (count($request) === 1)? 'home': $request[1];
+$action = (count($request) < 3)? '': $request[2];
+$item = (count($request) < 4)? 0 : (int)$request[3];
 
-        die('Erreur : ' . $e->getMessage());
+switch ($controler) {
+   case 'test':
+       require_once 'controler/test_controler.php';
+       break;
 
-    }
-    $num = 1
-    $sql = 'select * from user WHERE id=:num';
-    $response = $bdd->prepare( $sql );
-    $response->bindParam(':num', $num, PDO::PARAM_INT)
-    $response->execute();
-    $list =     $response->fetchAll(PDO::FETCH_ASSOC);
+    case 'home':
+       require_once 'controler/home_controler.php';
+       break;
 
-    foreach( $list as $row ){
-        echo $row['id'].'<br/>';
-    }
+   default:
+       require_once 'controler/home_controler.php';
+       break;
+}
