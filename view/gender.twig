@@ -1,20 +1,14 @@
 {% extends "template.twig" %}
 
-{% block titre %}
-    <p>
-        {{titre}}
-    </p>
-{% endblock %}
-
-{% block display %}
+{% block affichage %}
 <p class="col-12 text-center">
-test
     <ul>
         {% for array in list %}
             {% for element in array %}
-                <a href="/{{element}}">{{element}}</a>
+                <li><a href="/{{element}}">{{element}}</a></li>
             {% endfor %}
         {% endfor %}
     </ul>
+
 </p>
 {% endblock %}
