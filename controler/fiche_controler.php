@@ -5,8 +5,11 @@ switch ($action) {
     //     require 'model/test_model.php';
     //     break;
     default:
-        require 'model/test_model.php';
+        display($twig, $list, $info);
         break;
  }
 
-echo $twig->render('test.twig', array('list' => $list));
+function display($twig, $list, $info){
+    require 'model/fiche_model.php';
+    echo $twig->render('fiche.twig', array('list' => $list, 'info' => $info));
+}
