@@ -11,22 +11,25 @@
         crossorigin="anonymous">
 
     <title>Annuaire de films</title>
+    <base href="http://localhost/annuaire_films/">
 </head>
 
 <body>
     <header class="container-fluid">
         <div class="row">
-            <a class="col-12 text-center m-4" href="/home">
+            <a class="col-12 text-center m-4" href="home">
                 <h1>Annuaire de films</h1>
             </a>
+            {% block titre %}
+            {% endblock %}
         </div>
     </header>
     <main class="container-fluid">
         <section class="row d-flex flex-column align-items-center">
-            <a class="m-4" href="/test">
+            <a class="m-4" href="test">
                 <button class="btn btn-primary">Affiche la liste</button>
             </a>
-            {% block test %}
+            {% block display %}
             {% endblock %}
         </section>
     </main>

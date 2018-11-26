@@ -1,7 +1,14 @@
 {% extends "template.twig" %}
 
-{% block test %}
+{% block titre %}
+    <p>
+        {{titre}}
+    </p>
+{% endblock %}
+
+{% block display %}
 <p class="col-12 text-center">
+test
     <ul>
         {% for array in list %}
             {% for element in array %}
