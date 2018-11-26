@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:3306
--- Généré le :  Mer 21 Novembre 2018 à 16:22
--- Version du serveur :  10.3.10-MariaDB-1:10.3.10+maria~bionic-log
+-- Généré le :  Ven 23 Novembre 2018 à 15:42
+-- Version du serveur :  10.3.11-MariaDB-1:10.3.11+maria~bionic-log
 -- Version de PHP :  7.2.10-0ubuntu0.18.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `Annuaire_films`
+-- Base de données :  `annuaire_films`
 --
 
 -- --------------------------------------------------------
