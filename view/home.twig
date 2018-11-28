@@ -1,9 +1,17 @@
 {% extends "template.twig" %}
 
+{% block baseUrl %}
+<base href="{{baseUrl}}">
+{% endblock %}
+
 {% block info %}
-    <p>
-        {{info}}
+<div class="row">
+    <p  id="titre_home" class="col-12 text-center">
+            Retrouvez toutes les informations de vos films préférés!
+        <br>
+            De nouveaux films rajoutés tout les jours!
     </p>
+</div>
 {% endblock %}
 
 {% block affichage %}
@@ -13,10 +21,10 @@
 <article class="row">
     <div class="col-12 d-flex flex-wrap">
         {% for film in list %}
-            <div class="film_stamp p-4 d-flex flex-column">
-                <a href="fiche/{{film.titre}}"></a><img src="{{film.jaquette}}" width="187.5px" height="250px"></a>
-                <a href="fiche/{{film.titre}}">{{film.titre}}</a>
-            </div>
+        <div class="film_stamp p-4 d-flex flex-column">
+            <a href="/fiche/display/{{film.id}}"><img src="/{{film.jaquette}}" width="187.5px" height="250px"></a>
+            <a href="/fiche/display/{{film.id}}">{{film.titre}}</a>
+        </div>
         {% endfor %}
     </div>
 </article>

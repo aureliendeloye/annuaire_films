@@ -13,29 +13,29 @@
         crossorigin="anonymous">
     <!-- titre et favicon -->
     <title>Annuaire de films</title>
+    <!-- chemin de base des liens -->
+    {% block baseUrl %}
+    {% endblock %}
     <!-- Lien vers la feuille de style css -->
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="/style/style.css">
 </head>
 
 <body>
     <nav class="container-fluid">
         <div class="row">
-            <a class="col-12 text-center m-4" href="home">
+            <a class="col-12 text-center m-4" href="/home">
                 <h1>Annuaire de films</h1>
             </a>
         </div>
     </nav>
     <header class="container-fluid">
         <!-- Block d'affichage des informations relatives à l'affichage -->
-        {% block info %}
-        {% endblock %}
+        <section class="container">
+            {% block info %}
+            {% endblock %}
+        </section>
     </header>
     <main class="container-fluid">
-        <section class="container d-flex flex-column align-items-center">
-            <a class="m-4" href="fiche">
-                <button class="btn btn-primary">Affiche la liste</button>
-            </a>
-        </section>
         <!-- Section affichant les block twig relatives aux différents controleurs  -->
         <section class="container">
             {% block affichage %}

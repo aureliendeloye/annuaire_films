@@ -6,8 +6,9 @@ $loader = new Twig_Loader_Filesystem('view');
 $twig = new Twig_Environment($loader, array());
 
 //Récupération de la racine du site
-$baseUrl1 = $_SERVER['SCRIPT_NAME'];
-$i = count(explode("/", trim($baseUrl1, '/')));
+$scriptUrl = $_SERVER['SCRIPT_NAME'];
+$i = count(explode("/", trim($scriptUrl, '/')));
+$baseUrl = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].substr($scriptUrl, 0, -10);
 
 //Récupération de l'url contenant le controleur et l'action
 $url = $_SERVER['REQUEST_URI'];
@@ -15,7 +16,8 @@ $request = explode("/", trim($url, '/'));
 
 //Test et récupération du contrôleur et de l'action
 $controler = (count($request) === $i-1)? 'home': $request[$i-1];
-$action = (count($request) < $i+3)? '': $request[2];
+$action = (count($request) < $i+1)? '': $request[$i];
+$id = (count($request) < $i+2)? '': $request[$i+1];
 
 //Routeur pour acces aux contrôleurs
 switch ($controler) {

@@ -1,19 +1,50 @@
 {% extends "template.twig" %}
 
-{% block info %}
-    <p>
-        {{info}}
-    </p>
+{% block baseUrl %}
+<base href="{{baseUrl}}">
 {% endblock %}
 
+{% block info %}
+<div class="row">
+    <p id="titre_home" class="col-12 text-center">
+        Ici c'est la page d'info sur un film en particulier !
+    </p>
+</div>
+{% endblock %}
+
+
 {% block affichage %}
-<p class="col-12 text-center">
-    <ul>
-        {% for array in list %}
-            {% for element in array %}
-                <li>{{element}}</li>
-            {% endfor %}
+<header class="row">
+    <div class="col-12 text-center">
+        {% for films in list %}
+        <h2>
+            {{films.titre}}
+        </h2>
         {% endfor %}
-    </ul>
-</p>
+    </div>
+</header>
+<article class="row">
+    {% for films in list %}
+    <div class="film_fiche col-4 p-4 d-flex justify-content-center">
+        <img src="/{{films.jaquette}}" width="187.5px" height="250px">
+    </div>
+    <div class="col-8 p-4">
+        <p>{{films.synopsis}}</p>
+        <p>{{films.genre}}</p>
+        <p>{{films.année}}</p>
+        <p>{{film.note}}</p>
+    </div>
+    {% endfor %}
+</article>
+<div class="row">
+    <h3>Trailer</h3>
+</div>
+<article class="row">
+    {% for films in list %}
+    <div class="col-12">
+        <iframe width="560" height="315" src="{{film.trailer}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+    {% endfor %}
+</article>
 {% endblock %}
