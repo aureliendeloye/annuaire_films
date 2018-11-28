@@ -9,4 +9,4 @@ switch ($action) {
         break;
  }
 
-echo $twig->render('home.twig', array('list' => $list));
+echo $twig->render('home.twig', array('list' => $list, 'titre' => $titre));
