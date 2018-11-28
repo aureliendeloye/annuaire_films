@@ -2,21 +2,23 @@
 <html lang="fr">
 
 <head>
-    <!-- Required meta tags -->
+    <!-- meta tags obligatoires-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <!-- meta tags optionels -->
+    <meta name="auteurs" content="Fabien Cazalet, Gaëtan Emond, Aurélien Deloye">
+    <meta name="date de création" content="22 novembre 2018">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-    <base http://localhost/annuaire_films/>
-
+    <!-- titre et favicon -->
     <title>Annuaire de films</title>
-    <base href="http://localhost/annuaire_films/">
+    <!-- Lien vers la feuille de style css -->
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
-    <header class="container-fluid">
+    <nav class="container-fluid">
         <div class="row">
             <a class="col-12 text-center m-4" href="home">
                 <h1>Annuaire de films</h1>
@@ -24,16 +26,27 @@
             {% block titre %}
             {% endblock %}
         </div>
+    </nav>
+    <header class="container-fluid">
+        <!-- Block d'affichage des informations relatives à l'affichage -->
+        {% block info %}
+        {% endblock %}
     </header>
     <main class="container-fluid">
-        <section class="row d-flex flex-column align-items-center">
-            <a class="m-4" href="test">
+        <section class="container d-flex flex-column align-items-center">
+            <a class="m-4" href="fiche">
                 <button class="btn btn-primary">Affiche la liste</button>
             </a>
+        </section>
+        <!-- Section affichant les block twig relatives aux différents controleurs  -->
+        <section class="container">
             {% block affichage %}
             {% endblock %}
         </section>
     </main>
+    <footer>
+
+    </footer>
 
     <!-- Optional JavaScript -->
 

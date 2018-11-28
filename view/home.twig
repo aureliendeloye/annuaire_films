@@ -1,13 +1,23 @@
 {% extends "template.twig" %}
 
-{% block titre %}
+{% block info %}
     <p>
-        {{titre}}
+        {{info}}
     </p>
 {% endblock %}
 
-{% block test %}
-    <p class="col-12 text-center">
-        {{list}}
-    </p>
+{% block affichage %}
+<div class="row">
+    <h2 class="col-12 text-center">Les films à l'affiche</h2>
+</div>
+<article class="row">
+    <div class="col-12 d-flex flex-wrap">
+        {% for film in list %}
+            <div class="film_stamp p-4 d-flex flex-column">
+                <a href="fiche/{{film.titre}}"></a><img src="{{film.jaquette}}" width="187.5px" height="250px"></a>
+                <a href="fiche/{{film.titre}}">{{film.titre}}</a>
+            </div>
+        {% endfor %}
+    </div>
+</article>
 {% endblock %}
