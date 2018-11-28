@@ -5,11 +5,14 @@
 
     $sql = "SELECT films.titre, films.jaquette, films.synopsis, films.année, films.réalisateur,
     GROUP_CONCAT(genre.genre SEPARATOR ', ') AS genre 
-    FROM films_genre 
-       INNER JOIN films ON films_genre.film = films.id 
-        INNER JOIN genre ON films_genre.genre = genre.id
-        WHERE films.id = :id
-          GROUP BY films.titre";  // Requète SQL à envoyer
+    GROUP_CONCAT(realisateur.realisateur SEPARATOR ', ') AS realisateur
+    FROM films
+      INNER JOIN films_genre ON films_genre.film = films.id 
+      INNER JOIN genre ON films_genre.genre = genre.id
+      INNER JOIN films_realisateur ON film_realiateur.film = films.id
+      INNER JOIN realisateur ON films_realisateur.realisateur = realisateur.id
+      WHERE films.id = :id
+      GROUP BY films.titre";  // Requète SQL à envoyer
     $response = $bdd->prepare( $sql ); // Préparation de la requète
     $response->bindParam(':id', $id, PDO::PARAM_STR);
     $response->execute(); // Exécution de la requềte
