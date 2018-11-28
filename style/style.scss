@@ -1,0 +1,12 @@
+//variables
+$mainColor : #333333;
+$fontColor : #FFC300;
+
+//mixin
+
+
+//nesting de la page d'acceuil
+body{
+    background-color: $mainColor;
+    color: $fontColor;
+}
