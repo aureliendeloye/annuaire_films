@@ -1,9 +1,9 @@
 
-   <?php
+<?php
   // Chargement de l'environnement PDO
  require_once 'set_PDO.php';
 
- $sql = 'SELECT  FROM films'; // Requète SQL à envoyer
+ $sql = 'SELECT jaquette, titre FROM films'; // Requète SQL à envoyer
  $response = $bdd->prepare( $sql ); // Préparation de la requète
  $response->execute(); // Exécution de la requềte
 

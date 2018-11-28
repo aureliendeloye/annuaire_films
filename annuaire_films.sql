@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:3306
--- Généré le :  Lun 26 Novembre 2018 à 16:21
+-- Généré le :  Lun 26 Novembre 2018 à 16:27
 -- Version du serveur :  10.3.11-MariaDB-1:10.3.11+maria~bionic-log
 -- Version de PHP :  7.2.10-0ubuntu0.18.04.1
 
@@ -28,10 +28,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `films` (
   `id` int(4) NOT NULL,
-  `Titre` varchar(47) DEFAULT NULL,
-  `Description` varchar(1042) DEFAULT NULL,
-  `Année` int(4) DEFAULT NULL,
-  `Réalisateur` varchar(24) DEFAULT NULL,
+  `titre` varchar(47) DEFAULT NULL,
+  `synopsis` varchar(1042) DEFAULT NULL,
+  `année` int(4) DEFAULT NULL,
+  `réalisateur` varchar(24) DEFAULT NULL,
   `jaquette` char(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
@@ -39,7 +39,7 @@ CREATE TABLE `films` (
 -- Contenu de la table `films`
 --
 
-INSERT INTO `films` (`id`, `Titre`, `Description`, `Année`, `Réalisateur`, `jaquette`) VALUES
+INSERT INTO `films` (`id`, `titre`, `synopsis`, `année`, `réalisateur`, `jaquette`) VALUES
 (1, 'Pulp Fiction', 'L\'odyssée sanglante et burlesque de petits malfrats dans la jungle de Hollywood à travers trois histoires qui s\'entremêlent. Dans un restaurant, un couple de jeunes braqueurs, Pumpkin et Yolanda, discutent des risques que comporte leur activité. Deux truands, Jules Winnfield et son ami Vincent Vega, qui revient d\'Amsterdam, ont pour mission de récupérer une mallette au contenu mystérieux et de la rapporter à Marsellus Wallace.', 1994, 'Quentin Tarantino', 'media/pulp_fiction.jpg'),
 (2, 'Le voyage de Chihiro', 'Chihiro, dix ans, a tout d\'une petite fille capricieuse. Elle s\'apprête à emménager avec ses parents dans une nouvelle demeure.\nSur la route, la petite famille se retrouve face à un immense bâtiment rouge au centre duquel s\'ouvre un long tunnel. De l\'autre côté du passage se dresse une ville fantôme. Les parents découvrent dans un restaurant désert de nombreux mets succulents et ne tardent pas à se jeter dessus. Ils se retrouvent alors transformés en cochons.\nPrise de panique, Chihiro s\'enfuit et se dématérialise progressivement. L\'énigmatique Haku se charge de lui expliquer le fonctionnement de l\'univers dans lequel elle vient de pénétrer. Pour sauver ses parents, la fillette va devoir faire face à la terrible sorcière Yubaba, qui arbore les traits d\'une harpie méphistophélique.', 2002, 'Hayao Miyazaki', 'media/chihiro.jpg'),
 (3, 'Ghost in the Shell', 'Dans un futur proche, le Major est unique en son genre: humaine sauvée d’un terrible accident, son corps aux capacités cybernétiques lui permet de lutter contre les plus dangereux criminels. Face à une menace d’un nouveau genre qui permet de pirater et de contrôler les esprits, le Major est la seule à pouvoir la combattre. Alors qu’elle s’apprête à affronter ce nouvel ennemi, elle découvre qu’on lui a menti : sa vie n’a pas été sauvée, on la lui a volée. Rien ne l’arrêtera pour comprendre son passé, trouver les responsables et les empêcher de recommencer avec d’autres.', 2017, 'Rupert Sanders', 'media/ghost.jpg'),
