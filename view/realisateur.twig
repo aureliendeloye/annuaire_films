@@ -1,0 +1,44 @@
+{% extends "template.twig" %}
+
+{% block baseUrl %}
+<base href="{{baseUrl}}">
+{% endblock %}
+
+{% block info %}
+<div class="row">
+    <p id="titre_home" class="col-12 text-center">
+        La liste des réalisateurs avec leurs infos et leurs films
+    </p>
+</div>
+{% endblock %}
+
+{% block affichage %}
+<header class="row">
+    <div class="col-12 text-center m-2">
+        <h2>
+            Les réalisateurs
+        </h2>
+    </div>
+</header>
+{% for film in list %}
+<article class="list-card row my-3">
+    <div class=" col-3 d-flex p-0 ">
+        <img src="{{film.photo}}" width="100%">
+    </div>
+    <div class="col-9 px-5 py-3 d-flex flex-column justify-content-between">
+        <h2>{{film.nom}}</h2>
+        <p>{{film.bio}}</p>
+        <p>Films :</p>
+        <div class="d-flex">
+            <div>
+                <div class="film_stamp p-0 d-flex flex-column align-items-center">
+                    <a href="/fiche/display/{{film.id}}"><img src="/{{film.jaquette}}" width="70px" height="100px"></a>
+                    <a class="py-2" href="/fiche/display/{{film.id}}">{{film.titre}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</article>
+{% endfor %}
+{% endblock %}

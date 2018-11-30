@@ -14,8 +14,21 @@ body main header {
 body main h3 {
   color: #007bff;
 }
+body main h2 {
+  color: #007bff;
+}
 body main .film_stamp {
-  width: 232px;
+  width: 187.5px;
+  background-color: white;
+}
+body main .list-card {
+  background-color: white;
+}
+body main .film_fiche {
+  background-color: white;
+}
+body main .ba_bg {
+  background-color: black;
 }
 body footer {
   background-color: black;

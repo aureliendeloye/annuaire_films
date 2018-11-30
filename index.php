@@ -22,18 +22,26 @@ $id = (count($request) < $i+2)? '': $request[$i+1];
 //Routeur pour acces aux contrôleurs
 switch ($controler) {
    case 'fiche': // Affichage de la fiche d'un film en particulier
-       require_once 'controler/fiche_controler.php';
-       break;
+      require_once 'controler/fiche_controler.php';
+   break;
 
-    case 'home': // Affichage de la page d'acceuil en cliquant sur le boutton home
-       require_once 'controler/home_controler.php';
-       break;
+   case 'home': // Affichage de la page d'acceuil en cliquant sur le boutton home
+      require_once 'controler/home_controler.php';
+   break;
 
-    case 'gender':
-       require_once 'controler/gender_controler.php';
-       break;
+   case 'genre': // Affichage des genres et des films associés
+      require_once 'controler/genre_controler.php';
+   break;
+
+   case 'list': // Affichage de la liste détaillé de tous les films
+      require_once 'controler/list_controler.php';
+   break;
+
+   case 'realisateur': // Affichage des réalisateurs et de leurs films
+      require_once 'controler/realisateur_controler.php';
+   break;
 
    default: //Affichage de la page d'acceuil par défaut
-       require_once 'controler/home_controler.php';
-       break;
+      require_once 'controler/home_controler.php';
+   break;
 }

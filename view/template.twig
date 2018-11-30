@@ -32,9 +32,9 @@
                 </a>
             </div>
             <div>
-                <a class="px-3" href="/list">Liste des films</a>
-                <a class="px-3" href="/genre">Genre</a>
-                <a class="px-3" href="/realisteur">Réalisateurs</a>
+                <a class="px-3" href="/list/display">Liste des films</a>
+                <a class="px-3" href="/genre/display">Genre</a>
+                <a class="px-3" href="/realisateur/display">Réalisateurs</a>
             </div>
         </div>
     </nav>
@@ -49,7 +49,7 @@
 
     <main class="container-fluid">
         <!-- Section affichant les block twig relatives aux différents controleurs  -->
-        <section class="container mb-5 card">
+        <section class="container mb-5">
             <section class="row d-flex flex-column align-items-center">
                 {% block affichage %}
                 {% endblock %}

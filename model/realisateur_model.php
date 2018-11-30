@@ -1,14 +1,19 @@
 <?php
    
-   require_once 'set_PDO.php';
+  // Chargement de l'environnement PDO
+  require_once 'set_PDO.php';
 
-   $sql = 'SELECT Titre FROM films';
-   $response = $bdd->prepare( $sql );
-   // $response->bindParam(':num', $num, PDO::PARAM_INT)
-   $response->execute();
-   $list = $response->fetchAll(PDO::FETCH_ASSOC);
-   
-   $titre = 'Et voilà le nouveau titre';
+  $sql = "SELECT realisateur.nom, realisateur.photo, realisateur.bio, films.titre, films.jaquette, films.id
+  FROM realisateur
+  INNER JOIN films_realisateur ON realisateur.id = films_realisateur.realisateur
+  INNER JOIN films ON films.id = films_realisateur.film
+  GROUP BY realisateur.nom";  // Requète SQL à envoyer
+  $response = $bdd->prepare( $sql ); // Préparation de la requète
+  $response->bindParam(':id', $id, PDO::PARAM_STR); // Passage du paramètre PHP $id dans SQL
+  $response->execute(); // Exécution de la requềte
 
-   return $list;
-   return $titre;
+//  Stockage des données à renvoyer au controleur
+  $list = $response->fetchAll(PDO::FETCH_ASSOC);
+
+//  retour des données au contrôleur
+  return $list;
