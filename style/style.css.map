@@ -1,1 +1,7 @@
-{"version":3,"sourceRoot":"","sources":["style.scss"],"names":[],"mappings":"AAQA;EACI,kBARS;EAST,OARS","file":"style.css"}
+{
+"version": 3,
+"mappings": "AAQA,IAAI;EACA,gBAAgB,EARP,OAAO;EAShB,KAAK,EARI,OAAO",
+"sources": ["style.scss"],
+"names": [],
+"file": "style.css"
+}
