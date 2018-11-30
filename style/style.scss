@@ -1,6 +1,6 @@
 //variables
 $mainColor : #333333;
-$fontColor : #FFC300;
+$fontColor : #333333;
 
 //mixin
 
@@ -9,4 +9,45 @@ $fontColor : #FFC300;
 body{
     background-color: $mainColor;
     color: $fontColor;
+    nav{
+        background-color: black;
+    }
+    header{
+        color: white
+    }
+    main{
+        header{
+            color: #007bff;
+        }
+        h3{
+            color: #007bff;
+        }
+        h2{
+            color: #007bff;
+        }
+        .film_stamp{
+            width: 187.5px;
+            background-color: white;
+        }
+        .list-card{
+            background-color: white;
+        }
+        .film_fiche{
+            background-color: white;
+        }
+        .ba_bg{
+            background-color: black;
+        }
+        .real-photo{
+            background-color: black !important;
+        }
+        .real-text{
+            background-color: white;
+        }
+    }
+   
+    footer{
+        background-color: black;
+        height: 150px;
+    }
 }

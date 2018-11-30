@@ -1,20 +1,46 @@
 {% extends "template.twig" %}
 
-{% block info %}
-    <p>
-        {{info}}
-    </p>
+{% block baseUrl %}
+<base href="{{baseUrl}}">
 {% endblock %}
 
+{% block info %}
+<div class="row">
+    <p id="titre_home" class="col-12 text-center">
+        Ici c'est la page d'info sur un film en particulier !
+    </p>
+</div>
+{% endblock %}
+
+
 {% block affichage %}
-<p class="col-12 text-center">
-test
-    <ul>
-        {% for array in list %}
-            {% for element in array %}
-                <a href="/{{element}}">{{element}}</a>
-            {% endfor %}
-        {% endfor %}
-    </ul>
-</p>
+<article class="row film_fiche">
+    {% for films in list %}
+    <div class=" col-3 d-flex p-0">
+        <img src="/{{films.jaquette}}" width="auto" height="100%">
+    </div>
+    <div class="col-9 px-5 py-3 d-flex flex-column justify-content-between">
+        <h2>{{films.titre}}</h2>
+        <p>{{films.synopsis}}</p>
+        <div class="d-flex justify-content-between">
+            <p>genre<br>{{films.genre}}</p>
+            <p>année<br>{{films.année}}</p>
+            <p>réalisateur<br>{{films.realisateur}}</p>
+        </div>
+    </div>
+    {% endfor %}
+</article>
+<div class="ba_bg row">
+    <div class="col-12 d-flex justify-content-center p-3 w-100">
+        <h3>Bande-annonce</h3>
+    </div>
+</div>
+<article class="ba_bg row">
+    {% for film in list %}
+    <div class="col-12 pb-4 d-flex justify-content-cente. w-100r">
+        <iframe width="650" height="365" src="{{film.trailer}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+    {% endfor %}
+</article>
 {% endblock %}

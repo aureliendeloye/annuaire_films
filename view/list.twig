@@ -1,13 +1,53 @@
 {% extends "template.twig" %}
 
-{% block titre %}
-    <p>
-        {{titre}}
-    </p>
+{% block baseUrl %}
+<base href="{{baseUrl}}">
 {% endblock %}
 
-{% block display %}
-    <p class="col-12 text-center">
-        {{list}}
+{% block info %}
+<div class="row">
+    <p id="titre_home" class="col-12 text-center">
+        Tu peux voir la liste détaillé de tous nos films ici.
     </p>
+</div>
+{% endblock %}
+
+{% block affichage %}
+<header class="row">
+    <div class="col-12 text-center m-4">
+        <h2>
+            Liste des films
+        </h2>
+    </div>
+    <div class="col-12 d-flex justify-content-center">
+        <p>Filtrer par titre : </p>
+        <a class="px-5" href="/list/display/A">A</a>
+        <a class="px-5" href="/list/display/C">C</a>
+        <a class="px-5" href="/list/display/F">F</a>
+        <a class="px-5" href="/list/display/G">G</a>
+        <a class="px-5" href="/list/display/I">I</a>
+        <a class="px-5" href="/list/display/L">L</a>
+        <a class="px-5" href="/list/display/P">P</a>
+        <a class="px-5" href="/list/display/S">S</a>
+    </div>
+</header>
+{% for films in list %}
+<article class="list-card row my-3">
+    <div class=" col-3 d-flex p-0 ">
+        <img src="/{{films.jaquette}}" width="auto" height="100%">
+    </div>
+    <div class="col-9 px-5 py-3 d-flex flex-column justify-content-between">
+        <a href="/fiche/display/{{films.id}}">
+            <h2>{{films.titre}}</h2>
+        </a>
+        <p>{{films.synopsis}}</p>
+        <div class="d-flex justify-content-between">
+            <p>genre<br>{{films.genre}}</p>
+            <p>année<br>{{films.année}}</p>
+            <p>réalisateur<br>{{films.realisator}}</p>
+        </div>
+    </div>
+    </div>
+</article>
+{% endfor %}
 {% endblock %}

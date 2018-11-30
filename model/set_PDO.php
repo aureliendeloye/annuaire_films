@@ -2,7 +2,7 @@
 
     $username = 'root';
     $password = 'online@2017';
-    $database ='Annuaire_films';
+    $database ='annuaire_films';
     $host = 'localhost';
 
     try{

@@ -1,0 +1,57 @@
+{% extends "template.twig" %}
+
+{% block baseUrl %}
+<base href="{{baseUrl}}">
+{% endblock %}
+
+{% block info %}
+<div class="row">
+    <p id="titre_home" class="col-12 text-center">
+        La liste des réalisateurs avec leurs infos et leurs films
+    </p>
+</div>
+{% endblock %}
+
+{% block affichage %}
+<header class="row">
+    <div class="col-12 text-center m-2">
+        <h2>
+            Les réalisateurs
+        </h2>
+    </div>
+    <div class="col-12 d-flex justify-content-between">
+            <p>Filtrer par Nom : </p>
+            <a class="px-3" href="/realisateur/display/B">B</a>
+            <a class="px-3" href="/realisateur/display/C">C</a>
+            <a class="px-3" href="/realisateur/display/F">F</a>
+            <a class="px-3" href="/realisateur/display/G">G</a>
+            <a class="px-3" href="/realisateur/display/K">K</a>
+            <a class="px-3" href="/realisateur/display/M">M</a>
+            <a class="px-3" href="/realisateur/display/N">N</a>
+            <a class="px-3" href="/realisateur/display/S">S</a>
+            <a class="px-3" href="/realisateur/display/T">T</a>
+            <a class="px-3" href="/realisateur/display/W">W</a>
+        </div>
+</header>
+{% for film in list %}
+<article class="row my-3">
+    <div class=" real-photo col-3 d-flex p-0 align-items-center">
+        <img src="{{film.photo}}" width="100%" height="350px">
+    </div>
+    <div class="real-text col-9 px-5 py-3 d-flex flex-column justify-content-between">
+        <h2>{{film.prenom}} {{film.nom}}</h2>
+        <p>{{film.bio}}</p>
+        <p>Films :</p>
+        <div class="d-flex">
+            <div>
+                <div class="film_stamp p-0 d-flex flex-column align-items-center">
+                    <a href="/fiche/display/{{film.id}}"><img src="/{{film.jaquette}}" width="70px" height="100px"></a>
+                    <a class="py-2" href="/fiche/display/{{film.id}}">{{film.titre}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</article>
+{% endfor %}
+{% endblock %}
