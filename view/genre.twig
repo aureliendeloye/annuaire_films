@@ -13,14 +13,32 @@
 {% endblock %}
 
 {% block affichage %}
-<p class="col-12 text-center">
-    <ul>
-        {% for array in list %}
-            {% for element in array %}
-                <li><a href="/{{element}}">{{element}}</a></li>
-            {% endfor %}
-        {% endfor %}
-    </ul>
-
-</p>
+<header class="row">
+    <div class="col-12 text-center m-4">
+        <h2>
+            Liste des films par genres
+        </h2>
+    </div>
+    <div class="col-12 d-flex justify-content-center">
+        <p>Filtrer par titre : </p>
+        <a class="px-5" href="list/display">All</a>
+        <a class="px-5" href="list/display/Action">Action</a>
+        <a class="px-5" href="list/display/Animation">Animation</a>
+        <a class="px-5" href="list/display/Aventure">Aventure</a>
+        <a class="px-5" href="list/display/Comédie">Comédie</a>
+        <a class="px-5" href="list/display/Drame">Drame</a>
+        <a class="px-5" href="list/display/Policier">Policier</a>
+        <a class="px-5" href="list/display/Science Fiction">Science Fiction</a>
+        <a class="px-5" href="list/display/Thriler">Thriler</a>
+    </div>
+</header>
+{% for genre in list %}
+<article class="genre-card row my-3">
+    <div class="col-12">
+        <h2>genre.genre</h2>
+        <a href="fiche/display/{{genre.id}}"><img src="{{genre.jaquette}}" alt=""></a>
+        <a href="fiche/display/{{genre.id}}">{{genre.titre}}</a>
+    </div>
+</article>
+{% endfor %}
 {% endblock %}

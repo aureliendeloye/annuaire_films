@@ -17,7 +17,6 @@
 
 //  Stockage des données à renvoyer au controleur
   $list = $response->fetchAll(PDO::FETCH_ASSOC);
-  $test = ' realisateur '.$id;
   
 //  retour des données au contrôleur
   return $list;

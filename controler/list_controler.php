@@ -21,5 +21,5 @@ switch ($action) {
         break;
  }
 
-// génération du bloque twig list avec la liste de films à afficher
+// génération du bloque twig list avec la liste du ou des films à afficher
 echo $twig->render('list.twig', array('list' => $list, 'baseUrl' => $baseUrl));
