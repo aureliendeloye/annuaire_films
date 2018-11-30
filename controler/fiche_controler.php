@@ -1,12 +1,14 @@
 <?php
 
 switch ($action) {
-    // case 'display':
-    //     require 'model/test_model.php';
-    //     break;
+    case 'display':
+        require 'model/fiche_model.php';
+    break;
+    
     default:
-        require 'model/test_model.php';
+        require 'model/fiche_model.php';
         break;
  }
 
-echo $twig->render('test.twig', array('list' => $list));
+ echo $baseUrl;
+ echo $twig->render('fiche.twig', array('list' => $list, 'baseUrl' => $baseUrl));

@@ -1,6 +1,15 @@
 
-   <?php
-   
-    $list = 'Pour le moment y a rien. Clique sur le bouton pour voir les films';
+<?php
+  // Chargement de l'environnement PDO
+ require_once 'set_PDO.php';
 
-   return $list;
+ $sql = 'SELECT jaquette, titre, id FROM films'; // Requète SQL à envoyer
+ $response = $bdd->prepare( $sql ); // Préparation de la requète
+ $response->execute(); // Exécution de la requềte
+
+ //  Stockage des données à renvoyer au controleur
+ $list = $response->fetchAll(PDO::FETCH_ASSOC);
+ 
+ //  retour des données au contrôleur
+ return $list;
+ return $baseUrl;

@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AAQA,IAAI;EACA,gBAAgB,EARP,OAAO;EAShB,KAAK,EARI,OAAO",
-"sources": ["style.scss"],
-"names": [],
-"file": "style.css"
-}
+{"version":3,"sourceRoot":"","sources":["style.scss"],"names":[],"mappings":"AAQA;EACI,kBARS;EAST,OARS;;AAST;EACI;;AAEJ;EACI;;AAGA;EACI;;AAEJ;EACI;;AAEJ;EACI;;AAEJ;EACI;EACA;;AAEJ;EACI;;AAEJ;EACI;;AAEJ;EACI;;AAEJ;EACI;;AAEJ;EACI;;AAEJ;EACI;;AAIR;EACI;EACA","file":"style.css"}

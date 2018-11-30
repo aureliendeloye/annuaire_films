@@ -1,5 +1,47 @@
 body {
   background-color: #333333;
-  color: #FFC300; }
+  color: #333333;
+}
+body nav {
+  background-color: black;
+}
+body header {
+  color: white;
+}
+body main header {
+  color: #007bff;
+}
+body main h3 {
+  color: #007bff;
+}
+body main h2 {
+  color: #007bff;
+}
+body main .film_stamp {
+  width: 187.5px;
+  background-color: white;
+}
+body main .list-card {
+  background-color: white;
+}
+body main .list-image {
+  background-color: black;
+}
+body main .film_fiche {
+  background-color: white;
+}
+body main .ba_bg {
+  background-color: black;
+}
+body main .real-photo {
+  background-color: black !important;
+}
+body main .real-text {
+  background-color: white;
+}
+body footer {
+  background-color: black;
+  height: 150px;
+}
 
 /*# sourceMappingURL=style.css.map */
