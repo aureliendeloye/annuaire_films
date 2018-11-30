@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Annuaire de films MCV
 
 Bienvenue sur ce projet pédagogique d'annuaire de film. Le but de ce projet est d'apprendre à utiliser le modèle MCV.
@@ -45,3 +46,7 @@ Donner des exemples jusque la fin de l'installation
 ## License
 
 Ce projet est enregistré sous une license MIT - vous pouvez retrouver plus d'informations sur notre fichier [LICENSE.md](LICENSE.md)
+=======
+# annuaire_films
+blabla
+>>>>>>> 9e5530e505a25029ec1b7b9dd4c5b55a984a1f8c

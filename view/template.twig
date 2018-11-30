@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="fr">
 
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -9,27 +10,40 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-    <base http://localhost/annuaire_films/>
-
+    <link rel="stylesheet" href="style/style.css">
     <title>Annuaire de films</title>
 </head>
 
 <body>
     <header class="container-fluid">
-        <div class="row">
-            <a class="col-12 text-center m-4" href="home">
-                <h1>Annuaire de films</h1>
+        <div class="row back_header">
+            <a class="col-3 mt-5 mb-5 pl-5" href="home" style="text-decoration:none">
+                <h1 class="title p-3">CINESUME</h1>
             </a>
+            <a class="col-3 d-flex align-items-center" href="home" style="text-decoration:none">
+                <p class="color_police d-flex align-items-center">LISTE DE FILMS</p>
+            </a>
+            <a class="col-3 d-flex align-items-center" href="home" style="text-decoration:none">
+                <p class="color_police">REALISATEURS</p>
+            </a>
+            <a class="col-3 d-flex align-items-center" href="home" style="text-decoration:none">
+                <p class="color_police">GENRE</p>
+            </a>
+
         </div>
     </header>
-    <main class="container-fluid">
-        <section class="row d-flex flex-column align-items-center">
-            <a class="m-4" href="test">
-                <button class="btn btn-primary">Affiche la liste</button>
-            </a>
-            {% block affichage %}
-            {% endblock %}
-        </section>
+    <section class="container-fluid d-flex align-items-center background_sec1">
+        <div class="container">
+         {% block test %}
+         {% endblock %}   
+        </div>
+    </section>
+    <div class="endsec">
+    </div >
+    <main class="edit_main">
+
+        
+        <
     </main>
 
     <!-- Optional JavaScript -->

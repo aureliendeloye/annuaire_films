@@ -1,6 +1,9 @@
 
    <?php
    
-    $list = 'Pour le moment y a rien. Clique sur le bouton pour voir les films';
+    $list = 'Retrouvez toutes les informations de vos films préférés!';
+    $list2 = 'De nouveaux films rajoutés tout les jours!';
 
+   
    return $list;
+   return $list2;
