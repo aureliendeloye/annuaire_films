@@ -3,13 +3,13 @@
    // Chargement de l'environnement PDO
     require_once 'set_PDO.php';
 
-    $sql = "SELECT films.titre, films.jaquette, films.synopsis, films.année, films.réalisateur,
-    GROUP_CONCAT(genre.genre SEPARATOR ', ') AS genre 
+    $sql = "SELECT films.titre, films.jaquette, films.synopsis, films.année,
+    GROUP_CONCAT(genre.genre SEPARATOR ', ') AS genre, 
     GROUP_CONCAT(realisateur.realisateur SEPARATOR ', ') AS realisateur
     FROM films
       INNER JOIN films_genre ON films_genre.film = films.id 
       INNER JOIN genre ON films_genre.genre = genre.id
-      INNER JOIN films_realisateur ON film_realiateur.film = films.id
+      INNER JOIN films_realisateur ON films_realisateur.film = films.id
       INNER JOIN realisateur ON films_realisateur.realisateur = realisateur.id
       WHERE films.id = :id
       GROUP BY films.titre";  // Requète SQL à envoyer

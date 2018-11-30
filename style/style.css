@@ -2,5 +2,8 @@ body {
   background-color: #333333;
   color: #FFC300;
 }
+body .film_stamp {
+  width: 232px;
+}
 
 /*# sourceMappingURL=style.css.map */

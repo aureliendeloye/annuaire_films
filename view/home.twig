@@ -19,9 +19,9 @@
     <h2 class="col-12 text-center">Les films à l'affiche</h2>
 </div>
 <article class="row">
-    <div class="col-12 d-flex flex-wrap">
+    <div class="col-12 d-flex flex-wrap justify-content-center">
         {% for film in list %}
-        <div class="film_stamp p-4 d-flex flex-column">
+        <div class="film_stamp p-4 d-flex flex-column align-items-center">
             <a href="/fiche/display/{{film.id}}"><img src="/{{film.jaquette}}" width="187.5px" height="250px"></a>
             <a href="/fiche/display/{{film.id}}">{{film.titre}}</a>
         </div>
