@@ -1,5 +1,17 @@
 {% extends "template.twig" %}
 
+{% block baseUrl %}
+<base href="{{baseUrl}}">
+{% endblock %}
+
+{% block info %}
+<div class="row">
+    <p id="titre_home" class="col-12 text-center">
+        La liste des films par genre
+    </p>
+</div>
+{% endblock %}
+
 {% block affichage %}
 <p class="col-12 text-center">
     <ul>

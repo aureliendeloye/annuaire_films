@@ -21,16 +21,16 @@
     </div>
     <div class="col-12 d-flex justify-content-between">
             <p>Filtrer par Nom : </p>
-            <a class="px-3" href="/realisateur/display/B">B</a>
-            <a class="px-3" href="/realisateur/display/C">C</a>
-            <a class="px-3" href="/realisateur/display/F">F</a>
-            <a class="px-3" href="/realisateur/display/G">G</a>
-            <a class="px-3" href="/realisateur/display/K">K</a>
-            <a class="px-3" href="/realisateur/display/M">M</a>
-            <a class="px-3" href="/realisateur/display/N">N</a>
-            <a class="px-3" href="/realisateur/display/S">S</a>
-            <a class="px-3" href="/realisateur/display/T">T</a>
-            <a class="px-3" href="/realisateur/display/W">W</a>
+            <a class="px-3" href="realisateur/display/B">B</a>
+            <a class="px-3" href="realisateur/display/C">C</a>
+            <a class="px-3" href="realisateur/display/F">F</a>
+            <a class="px-3" href="realisateur/display/G">G</a>
+            <a class="px-3" href="realisateur/display/K">K</a>
+            <a class="px-3" href="realisateur/display/M">M</a>
+            <a class="px-3" href="realisateur/display/N">N</a>
+            <a class="px-3" href="realisateur/display/S">S</a>
+            <a class="px-3" href="realisateur/display/T">T</a>
+            <a class="px-3" href="realisateur/display/W">W</a>
         </div>
 </header>
 {% for film in list %}
@@ -45,8 +45,8 @@
         <div class="d-flex">
             <div>
                 <div class="film_stamp p-0 d-flex flex-column align-items-center">
-                    <a href="/fiche/display/{{film.id}}"><img src="/{{film.jaquette}}" width="70px" height="100px"></a>
-                    <a class="py-2" href="/fiche/display/{{film.id}}">{{film.titre}}</a>
+                    <a href="fiche/display/{{film.id}}"><img src="{{film.jaquette}}" width="70px" height="100px"></a>
+                    <a class="py-2" href="fiche/display/{{film.id}}">{{film.titre}}</a>
                 </div>
             </div>
         </div>

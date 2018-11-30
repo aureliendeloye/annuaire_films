@@ -11,5 +11,6 @@ switch ($action) {
         break;
  }
 
+ echo $baseUrl;
 // Rendu du block twig avec les données récupérées dans le fichier home_model.php
 echo $twig->render('home.twig', array('list' => $list, 'baseUrl' => $baseUrl));

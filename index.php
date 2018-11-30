@@ -8,7 +8,7 @@ $twig = new Twig_Environment($loader, array());
 //Récupération de la racine du site
 $scriptUrl = $_SERVER['SCRIPT_NAME'];
 $i = count(explode("/", trim($scriptUrl, '/')));
-$baseUrl = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].substr($scriptUrl, 0, -10);
+$baseUrl = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].substr($scriptUrl, 0, -9);
 
 //Récupération de l'url contenant le controleur et l'action
 $url = $_SERVER['REQUEST_URI'];

@@ -19,3 +19,4 @@
 
 //  retour des données au contrôleur
   return $list;
+  return $baseUrl;

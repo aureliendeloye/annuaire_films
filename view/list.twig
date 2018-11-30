@@ -21,23 +21,23 @@
     </div>
     <div class="col-12 d-flex justify-content-center">
         <p>Filtrer par titre : </p>
-        <a class="px-5" href="/list/display/A">A</a>
-        <a class="px-5" href="/list/display/C">C</a>
-        <a class="px-5" href="/list/display/F">F</a>
-        <a class="px-5" href="/list/display/G">G</a>
-        <a class="px-5" href="/list/display/I">I</a>
-        <a class="px-5" href="/list/display/L">L</a>
-        <a class="px-5" href="/list/display/P">P</a>
-        <a class="px-5" href="/list/display/S">S</a>
+        <a class="px-5" href="list/display/A">A</a>
+        <a class="px-5" href="list/display/C">C</a>
+        <a class="px-5" href="list/display/F">F</a>
+        <a class="px-5" href="list/display/G">G</a>
+        <a class="px-5" href="list/display/I">I</a>
+        <a class="px-5" href="list/display/L">L</a>
+        <a class="px-5" href="list/display/P">P</a>
+        <a class="px-5" href="list/display/S">S</a>
     </div>
 </header>
 {% for films in list %}
 <article class="list-card row my-3">
     <div class=" col-3 d-flex p-0 ">
-        <img src="/{{films.jaquette}}" width="auto" height="100%">
+        <img src="{{films.jaquette}}" width="auto" height="100%">
     </div>
     <div class="col-9 px-5 py-3 d-flex flex-column justify-content-between">
-        <a href="/fiche/display/{{films.id}}">
+        <a href="fiche/display/{{films.id}}">
             <h2>{{films.titre}}</h2>
         </a>
         <p>{{films.synopsis}}</p>
