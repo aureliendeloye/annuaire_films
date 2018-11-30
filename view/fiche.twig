@@ -25,7 +25,7 @@
 </header>
 <article class="row">
     {% for films in list %}
-    <div class="film_fiche col-3 p-4 d-flex">
+    <div class="film_fiche col-3 p-4 d-flex justify-content-center">
         <img src="/{{films.jaquette}}" width="187.5px" height="250px">
     </div>
     <div class="col-9 p-4">
@@ -41,7 +41,7 @@
 </div>
 <article class="row p-4">
     {% for film in list %}
-    <div class="col-12 d-flex justify-content-center">
+    <div class="col-12 pb-4 d-flex justify-content-center">
         <iframe width="560" height="315" src="{{film.trailer}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
     </div>

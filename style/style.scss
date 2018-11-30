@@ -1,6 +1,6 @@
 //variables
 $mainColor : #333333;
-$fontColor : #FFC300;
+$fontColor : #333333;
 
 //mixin
 
@@ -9,7 +9,26 @@ $fontColor : #FFC300;
 body{
     background-color: $mainColor;
     color: $fontColor;
-    .film_stamp{
-        width: 232px;
+    nav{
+        background-color: black;
+    }
+    header{
+        color: white
+    }
+    main{
+        header{
+            color: #007bff;
+        }
+        h3{
+            color: #007bff;
+        }
+        .film_stamp{
+            width: 232px;
+        }
+    }
+   
+    footer{
+        background-color: black;
+        height: 150px;
     }
 }

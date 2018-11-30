@@ -1,9 +1,25 @@
 body {
   background-color: #333333;
-  color: #FFC300;
+  color: #333333;
 }
-body .film_stamp {
+body nav {
+  background-color: black;
+}
+body header {
+  color: white;
+}
+body main header {
+  color: #007bff;
+}
+body main h3 {
+  color: #007bff;
+}
+body main .film_stamp {
   width: 232px;
+}
+body footer {
+  background-color: black;
+  height: 150px;
 }
 
 /*# sourceMappingURL=style.css.map */
