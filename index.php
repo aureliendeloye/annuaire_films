@@ -29,6 +29,10 @@ switch ($controler) {
        require_once 'controler/home_controler.php';
        break;
 
+    case 'gender':
+       require_once 'controler/gender_controler.php';
+       break;
+
    default: //Affichage de la page d'acceuil par défaut
        require_once 'controler/home_controler.php';
        break;
