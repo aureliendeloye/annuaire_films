@@ -3,7 +3,7 @@
    // Chargement de l'environnement PDO
     require_once 'set_PDO.php';
 
-    $sql = "SELECT films.titre, films.jaquette, films.synopsis, films.année,
+    $sql = "SELECT films.titre, films.jaquette, films.trailer, films.synopsis, films.année,
     GROUP_CONCAT(genre.genre SEPARATOR ', ') AS genre, 
     GROUP_CONCAT(realisateur.realisateur SEPARATOR ', ') AS realisateur
     FROM films

@@ -15,7 +15,7 @@
 
 {% block affichage %}
 <header class="row">
-    <div class="col-12 text-center">
+    <div class="col-12 text-center p-4">
         {% for films in list %}
         <h2>
             {{films.titre}}
@@ -25,10 +25,10 @@
 </header>
 <article class="row">
     {% for films in list %}
-    <div class="film_fiche col-4 p-4 d-flex justify-content-center">
+    <div class="film_fiche col-3 p-4 d-flex">
         <img src="/{{films.jaquette}}" width="187.5px" height="250px">
     </div>
-    <div class="col-8 p-4">
+    <div class="col-9 p-4">
         <p>{{films.synopsis}}</p>
         <p>{{films.genre}}</p>
         <p>{{films.année}}</p>
@@ -37,11 +37,11 @@
     {% endfor %}
 </article>
 <div class="row">
-    <h3>Trailer</h3>
+    <h3 class="col-12 text-center p-4">Bande-annonce</h3>
 </div>
-<article class="row">
-    {% for films in list %}
-    <div class="col-12">
+<article class="row p-4">
+    {% for film in list %}
+    <div class="col-12 d-flex justify-content-center">
         <iframe width="560" height="315" src="{{film.trailer}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
     </div>
