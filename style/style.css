@@ -30,6 +30,12 @@ body main .film_fiche {
 body main .ba_bg {
   background-color: black;
 }
+body main .real-photo {
+  background-color: black !important;
+}
+body main .real-text {
+  background-color: white;
+}
 body footer {
   background-color: black;
   height: 150px;
