@@ -24,6 +24,9 @@ body main .film_stamp {
 body main .list-card {
   background-color: white;
 }
+body main .list-image {
+  background-color: black;
+}
 body main .film_fiche {
   background-color: white;
 }
