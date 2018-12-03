@@ -19,9 +19,11 @@
 {% block affichage %}
 <article class="row film_fiche m-0">
     {% for films in list %}
+    {# Affichage de la jaquette du film #}
     <div class="div-jaquette col-12 col-md-3 col-lg-3 col-xl-3 d-flex p-0 align-items-center justify-content-center">
         <img class="fiche-jaquette" src="{{films.jaquette}}"d>
     </div>
+    {# Affichage du titre, du synopsis, du genre, de l'année et du réalisateur #}
     <div class="col-12 col-md-9 col-lg-9 col-xl-9 px-5 py-3 d-flex flex-column justify-content-between">
         <h2>{{films.titre}}</h2>
         <p>{{films.synopsis}}</p>

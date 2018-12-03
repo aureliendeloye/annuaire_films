@@ -39,11 +39,13 @@
     </div>
 </section>
 
+{# Affichage des films d'un même genre #}
 {% for genre in listGenre %}
-
+{# affichage du genre #}
 <header class="genre-card row d-flex justify-content-center align-items-center">
     <h2>{{genre.genre}}</h2>
 </header>
+{# affichage de la jaquette et du titre #}
 <article class="row">
     <div class="col-12 d-flex flex-wrap justify-content-center py-3">
         {% for film in listFilms %}
