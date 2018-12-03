@@ -18,26 +18,26 @@
 {# bloque d'affichage principale qui affiche les films par genre #}
 {% block affichage %}
 {# titre de la section #}
-<header class="row my-3">
-    <div class="col-12 text-center m-4">
+<section class="row mb-4">
+    <div class="col-12 text-center py-2">
         <h2>
             Liste des films par genres
         </h2>
     </div>
     {# filtre par genre #}
-    <div class="col-12 d-flex justify-content-center align-items-center">
+    <div class="col-12 d-flex flex-wrap justify-content-center align-items-center">
         <p class="m-0 p-2 filtre-type">Filtrer par titre : </p>
-        <a class="px-3 py-2 filtre-select" href="genre/display">All</a>
-        <a class="px-3 py-2 filtre-select" href="genre/display/action">Action</a>
-        <a class="px-3 py-2 filtre-select" href="genre/display/animation">Animation</a>
-        <a class="px-3 py-2 filtre-select" href="genre/display/aventure">Aventure</a>
-        <a class="px-3 py-2 filtre-select" href="genre/display/comedie">Comédie</a>
-        <a class="px-3 py-2 filtre-select" href="genre/display/drame">Drame</a>
-        <a class="px-3 py-2 filtre-select" href="genre/display/policier">Policier</a>
-        <a class="px-3 py-2 filtre-select" href="genre/display/science-fiction">Science Fiction</a>
-        <a class="px-3 py-2 filtre-select" href="genre/display/thriller">Thriller</a>
+        <a class="p-2 filtre-select" href="genre/display">All</a>
+        <a class="p-2 filtre-select" href="genre/display/action">Action</a>
+        <a class="p-2 filtre-select" href="genre/display/animation">Animation</a>
+        <a class="p-2 filtre-select" href="genre/display/aventure">Aventure</a>
+        <a class="p-2 filtre-select" href="genre/display/comedie">Comédie</a>
+        <a class="p-2 filtre-select" href="genre/display/drame">Drame</a>
+        <a class="p-2 filtre-select" href="genre/display/policier">Policier</a>
+        <a class="p-2 filtre-select" href="genre/display/science-fiction">Science Fiction</a>
+        <a class="p-2 filtre-select" href="genre/display/thriller">Thriller</a>
     </div>
-</header>
+</section>
 
 {% for genre in listGenre %}
 
@@ -48,9 +48,9 @@
     <div class="col-12 d-flex flex-wrap justify-content-center py-3">
         {% for film in listFilms %}
         {% if film.genre == genre.genre %}
-        <div class="film_stamp p-0 m-2 d-flex flex-column align-items-center">
-            <a href="fiche/display/{{film.id}}"><img src="{{film.jaquette}}" width="187.5px" height="250px"></a>
-            <a class="py-2" href="fiche/display/{{film.id}}">{{film.titre}}</a>
+        <div class="film_stamp p-0 m-1 m-md-3 m-lg-4 m-xl-4 d-flex flex-column align-items-center justify-content-between">
+            <a href="fiche/display/{{film.id}}"><img class="home-jaquette" src="{{film.jaquette}}" alt="{{film.titre}}"></a>
+            <a class="py-2 text-center" href="fiche/display/{{film.id}}">{{film.titre}}</a>
         </div>
         {% endif %}
         {% endfor %}
