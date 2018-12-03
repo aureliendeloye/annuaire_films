@@ -1,8 +1,12 @@
 <?php 
 
+$scriptUrl = $_SERVER['SCRIPT_NAME'];
+$i = count(explode("/", trim($scriptUrl, '/')));
+$baseUrl = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].substr($scriptUrl, 0, -9);
+
     $username = 'root';
     $password = 'online@2017';
-    $database ='Annuaire_films';
+    $database ='annuaire_films';
     $host = 'localhost';
 
     try{
@@ -12,5 +16,4 @@
     }catch (Exception $e){
 
         die('Erreur : ' . $e->getMessage());
-
     }
