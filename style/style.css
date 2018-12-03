@@ -1,9 +1,22 @@
 body {
   background-color: #333333;
   color: #333333;
+  min-height: 100vh;
 }
 body nav {
   background-color: black;
+}
+body nav a {
+  text-decoration: none !important;
+}
+body nav .menu-sub {
+  text-decoration: none !important;
+  color: #007bff;
+}
+body nav .menu-sub:hover {
+  color: white;
+  background-color: #007bff;
+  transition: 200ms;
 }
 body header {
   color: white;
@@ -30,8 +43,9 @@ body main .list-image {
 body main .film_fiche {
   background-color: white;
 }
-body main .ba_bg {
+body main .trailer-bg {
   background-color: black;
+  width: 100%;
 }
 body main .real-photo {
   background-color: black !important;
@@ -39,9 +53,37 @@ body main .real-photo {
 body main .real-text {
   background-color: white;
 }
+body main .filtre-type {
+  background-color: #dddddd;
+}
+body main .filtre-select {
+  background-color: #eeeeee;
+  text-decoration: none !important;
+  color: #007bff;
+}
+body main .filtre-select:hover {
+  background-color: #007bff;
+  color: white;
+  transition: 200ms;
+}
+body main .genre-card {
+  background-color: #444444;
+  width: 82.5%;
+}
 body footer {
   background-color: black;
-  height: 150px;
+}
+body footer a {
+  text-decoration: none !important;
+}
+body footer .menu-sub {
+  text-decoration: none !important;
+  color: #007bff;
+}
+body footer .menu-sub:hover {
+  color: white;
+  background-color: #007bff;
+  transition: 200ms;
 }
 
 /*# sourceMappingURL=style.css.map */
