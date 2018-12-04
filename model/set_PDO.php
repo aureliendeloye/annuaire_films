@@ -2,7 +2,7 @@
 
 $scriptUrl = $_SERVER['SCRIPT_NAME']; // récupération de l'URI
 $i = count(explode("/", trim($scriptUrl, '/'))); //déconmpte du nombre de caractères de l'uri
-$baseUrl = 'https://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].substr($scriptUrl, 0, -9); //création de l'URL de base
+$baseUrl = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].substr($scriptUrl, 0, -9); //création de l'URL de base
 
 
 //Infos de connexion à la base de données
