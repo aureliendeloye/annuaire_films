@@ -1,9 +1,12 @@
+{# indique la dépendance au template #}
 {% extends "template.twig" %}
 
+{# fourni l'ur de base des liens en fonction de la machine #}
 {% block baseUrl %}
 <base href="{{baseUrl}}">
 {% endblock %}
 
+{# affiche les infos de la section en cours (ici liste de films) #}
 {% block info %}
 <div class="row">
     <p id="titre_home" class="col-12 text-center">
@@ -12,6 +15,7 @@
 </div>
 {% endblock %}
 
+{# Affichage de la liste des films #}
 {% block affichage %}
 <article class="row">
     {# titre de la section #}
@@ -34,16 +38,23 @@
         <a class="px-3 py-2 filtre-select" href="list/display/S">S</a>
     </div>
 </article>
+
+{# génération de la fiche de chaque film #}
 {% for films in list %}
 <article class="list-card row my-3">
+    {# affichage de la jaquette du film #}
     <div class="list-image col-lg-3 col-xl-3 d-flex p-0 align-items-center justify-content-center">
         <a href="fiche/display/{{films.id}}"><img src="{{films.jaquette}}" width="100%" height="330px"></a> 
     </div>
+    {# affichage des infos du film #}
     <div class="col-lg-9 col-xl-9 px-5 py-3 d-flex flex-column justify-content-between">
+        {# affichage du titre #}
         <a href="fiche/display/{{films.id}}">
             <h2>{{films.titre}}</h2>
         </a>
+        {# affichage du synopsis #}
         <p>{{films.synopsis}}</p>
+        {# affichage des genre/année/realisateur #}
         <div class="d-flex justify-content-between">
             <p>genre<br>{{films.genre}}</p>
             <p>année<br>{{films.année}}</p>

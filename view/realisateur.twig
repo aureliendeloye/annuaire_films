@@ -1,6 +1,6 @@
 {% extends "template.twig" %}
 
-{# url de base pour les liens relatifs  #}
+{# url de base pour les liens en fonction de la machine  #}
 {% block baseUrl %}
 <base href="{{baseUrl}}">
 {% endblock %}
@@ -14,14 +14,16 @@
 </div>
 {% endblock %}
 
-{# affichage principal de la page #}
+{# affichage des réalisateurs#}
 {% block affichage %}
 <section class="row">
+    {# affichage du titre #}
     <div class="col-12 text-center m-2">
         <h2>
             Les réalisateurs
         </h2>
     </div>
+    {# filtre par nom des réalisateurs #}
     <div class="col-12 d-flex flex-wrap justify-content-center">
             <p class="m-0 p-2 filtre-type">Filtrer par Nom : </p>
             <a class="px-3 py-2 filtre-select" href="realisateur/display">All</a>
@@ -37,6 +39,7 @@
             <a class="px-3 py-2 filtre-select" href="realisateur/display/W">W</a>
     </div>
 </section>
+
 {% for film in list %}
 <article class="row my-3">
     <div class=" div-real col-12 col-md-3 col-lg-3 col-xl-3 d-flex p-0 align-items-center">

@@ -39,22 +39,24 @@
     </div>
 </section>
 
-{% for genre in listGenre %}
-
-<header class="genre-card row d-flex justify-content-center align-items-center">
-    <h2>{{genre.genre}}</h2>
-</header>
-<article class="row">
-    <div class="col-12 d-flex flex-wrap justify-content-center py-3">
-        {% for film in listFilms %}
-        {% if film.genre == genre.genre %}
-        <div class="film_stamp p-0 m-1 m-md-3 m-lg-4 m-xl-4 d-flex flex-column align-items-center justify-content-between">
-            <a href="fiche/display/{{film.id}}"><img class="home-jaquette" src="{{film.jaquette}}" alt="{{film.titre}}"></a>
-            <a class="py-2 text-center" href="fiche/display/{{film.id}}">{{film.titre}}</a>
-        </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-</article>
-{% endfor %}
+{# Affichage des films d'un même genre #}
+    {% for genre in listGenre %}
+        {# affichage du genre #}
+        <header class="genre-card row d-flex justify-content-center align-items-center">
+            <h2>{{genre.genre}}</h2>
+        </header>
+        {# affichage de la jaquette et du titre #}
+        <article class="row">
+            <div class="col-12 d-flex flex-wrap justify-content-center py-3">
+                {% for film in listFilms %}
+                    {% if film.genre == genre.genre %}
+                        <div class="film_stamp p-0 m-1 m-md-3 m-lg-4 m-xl-4 d-flex flex-column align-items-center justify-content-between">
+                            <a href="fiche/display/{{film.id}}"><img class="home-jaquette" src="{{film.jaquette}}" alt="{{film.titre}}"></a>
+                            <a class="py-2 text-center" href="fiche/display/{{film.id}}">{{film.titre}}</a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </article>
+    {% endfor %}
 {% endblock %}
